@@ -7,27 +7,93 @@
 .hero{
     width: 100%;
     min-height: 100vh;
-    border: 2px solid black;
+    background: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab);
+    background-size: 300% 300%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    animation: color 12s ease-in-out infinite;
+}
+
+@keyframes color {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
 }
 
 .hero h1{
-
+    font-size: 45px;
+    font-weight: 500;
+    margin-top: -50px;
+    margin-bottom: 50px;
 }
 
 .hero h1 span{
-
+    color: #ff2963;
 }
 
 textarea{
+    width: 600px;
+    height: 250px;
+    background: #403d84;
+    color: #fff;
+    font-size: 15px;
+    border: 0;
+    outline: 0;
+    padding: 20px;
+    border-radius: 10px;
     resize: none;
+    margin-bottom: 30px;
+}
+
+textarea::placeholder {
+    font-size: 16px;
+    color: #ddd;
+}
+
+.row {
+    width: 600px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+button {
+    background: #ff2963;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 35px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+button img {
+    width: 16px;
+    margin-right: 10px;
 }
 
 select{
-    width: 50%;
+    flex: 1;
+    color: #fff;
+    background: #403d84;
     height: 50px;
-    width: 500px;
+    padding: 0 20px;
+    outline: 0;
+    border: 0;
+    border-radius: 35px;
     appearance: none;  
-    background-color: rgb(146, 182, 223);
     background-image: url(images/dropdown.png);
     background-repeat: no-repeat;
     background-size: 15px;
