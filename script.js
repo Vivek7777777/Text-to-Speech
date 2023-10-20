@@ -1,12 +1,12 @@
-let speech = new SpeechSynthesisUtterance;
+let speech = new SpeechSynthesisUtterance();
 let voices = [];
 
-let btn = document.querySelector("button"),
-textarea = document.querySelector("textarea"),
+let btn = document.querySelector("button");
+let textarea = document.querySelector("textarea");
 voiceSelect = document.querySelector("select");
 
 window.speechSynthesis.onvoiceschanged = () => {
-    //getVoices return all the voices available on thd device
+    //getVoices return all the voices available on the device
     voices = window.speechSynthesis.getVoices();
     speech.voice = voices[0];
 
@@ -20,6 +20,7 @@ voiceSelect.addEventListener("change", () => {
 })
 
 btn.addEventListener("click", () => {
+    console.log("click");
     speech.text = textarea.value;
     window.speechSynthesis.speak(speech);
 })
